@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #008080;
+  font-family: "Asap", sans-serif;
+  color: #fff;
+}
+.placeholder {
+  height: 60px;
+}
+.App-header {
+  background-color: #003333;
+  text-align: center;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+@media (max-width: 31.25rem) {
+  h2 {
+    font-size: 1.25rem;
+  }
+  .App-header {
+    padding: 0 0.25em;
+    position: fixed;
+  }
+  .photo {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.dropdown {
+  position: relative;
+  width: 6.25rem;
+  margin: 1em auto;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 7px;
+  height: 7px;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: 0.2s ease-in-out;
+}
+.dropdown:hover::after {
+  transform: rotate(135deg);
+}
+
+.dropdown .drop {
+  position: absolute;
+  transform: translateX(-20px) translateY(5px);
+  width: 110px;
+  background-color: #003333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+.dropdown:hover .drop {
+  height: 6.25rem;
+  visibility: visible;
+}
+
+.drop-item {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.content {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.content p {
+  font-size: 1.2rem;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project {
+  background-color: #004d4d;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.project img {
+  max-width: 100%;
+}
+.project h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.project p {
+  font-size: 1.2rem;
+}
+
+.contact li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  list-style-type: none;
+}
+.contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*intro*/
+.item-title,
+.title {
+  width: fit-content;
+  margin: 0.25em 0;
+  padding: 0.25em;
+}
+#portfolio .title{
+  margin: 0.25em auto;
+}
+.title{
+  background-color: #003333;
+}
+.item-title{
+background-color: #008080;
+}
+.intro__img {
+  max-width: 100%;
+}
+@media (min-width: 600px) {
+  #about {
+    display: grid;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "title img"
+      "subtitle img";
+    grid-template-columns: 1fr 200px;
+  }
+
+  .intro__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+  .about-title {
+    align-self: start;
+  }
+}
+
+/*contact */
+
+.footer {
+  background: #003333;
+  text-align: center;
+  padding: 2.5em 0;
+  margin-top: 1em;
+}
+
+.footer a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: .7;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 .5em;
+}
+
+.social-list__link {
+  padding: .5em;
+}
+
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fa-phone{
+  margin-right: .5em;
+}
